@@ -22,7 +22,7 @@ class DatabaseConfig:
 
 @pytest.fixture
 def config() -> DatabaseConfig:
-    config_path = os.environ.get("CONFIGPATH")
+    config_path = os.environ.get("tests/config.yml")
     with open(config_path, "r") as f:
         raw_config = yaml.safe_load(f)
 
