@@ -35,8 +35,8 @@ TASK_2_QUERY = """
 # Нужно вывести 1 значение в колонке count
 TASK_3_QUERY = """
     SELECT COUNT(1) FROM flights AS f
-    LEFT JOIN airports AS a_dp ON f.departure_airport=a_dp.airport_code
-    LEFT JOIN airports AS a_ar ON f.arrival_airport=a_ar.airport_code
+    JOIN airports AS a_dp ON f.departure_airport=a_dp.airport_code
+    JOIN airports AS a_ar ON f.arrival_airport=a_ar.airport_code
     WHERE a_ar.timezone=a_dp.timezone
 """
 #  count
